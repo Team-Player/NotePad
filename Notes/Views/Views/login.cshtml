@@ -1,0 +1,68 @@
+﻿@using Notes.Models
+@model LoginViewModel
+
+@{
+    Layout = null;
+}
+
+<div class="row">
+    <hr />
+    <div class="col-md-6">
+        <form class="form-horizontal" role="form">
+
+            @*@Html.AntiForgeryToken()*@
+            <h4>@MUI.dictionary.TtlLoginLocal</h4>
+            <hr />
+
+            <div class="input-group col-sm-offset-1 col-sm-10">
+                <span class="input-group-addon"><span class="fa fa-user fix-label"></span></span>
+                @* @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", @placeholder = @MUI.dictionary.PhlUserName }) *@
+                <input type="text" class="form-control" placeholder=@MUI.dictionary.PhlUserName ng-model="model.loginData.userName" autofocus>
+            </div>
+
+            <br />
+
+            <div class="input-group col-sm-offset-1 col-sm-10">
+                <span class="input-group-addon"><span class="fa fa-key fix-label"></span></span>
+                @* @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = @MUI.dictionary.PhlPassword }) *@
+                <input type="password" class="form-control" placeholder=@MUI.dictionary.PhlPassword ng-model="model.loginData.passWord">
+            </div>
+
+            <br />
+
+            <div class="input-group col-xs-12">
+                <div class="checkbox pull-left col-xs-offset-1 col-xs-6 col-sm-offset-2 col-sm-5">
+                    @* @Html.CheckBoxFor(m => m.RememberMe, new {disabled = "disabled"}) *@
+                    <input disabled="disabled" type="checkbox" value="true" ng-model= "model.loginData.rememberMe">
+                    @Html.LabelFor(m => m.RememberMe, new {disabled = "disabled"})
+                </div>
+                <div class="col-xs-offset-0 col-xs-5 col-sm-4">
+                    @*<input type="submit" class="btn btn-primary col-xs-10" value="@MUI.dictionary.BtnLogin" />*@
+                    <button class="btn btn-primary col-xs-10" type="submit" ng-click="model.login()">@MUI.dictionary.BtnLogin</button>
+                </div>
+            </div>
+
+            @*@Html.ActionLink(@MUI.dictionary.BtnRegNewUser, "Register", "", new { @class = "btn btn-default col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8", @disabled = "disabled" })*@
+            @*<br />
+
+            <div class="input-group col-xs-12">                 
+                <a class="btn btn-default col-xs-offset-1 col-xs-10 col-sm-offset-2 col-sm-8" disabled="disabled">@MUI.dictionary.BtnRegNewUser</a>
+            </div>*@
+
+            <hr />
+        </form>
+    </div> <!--col-->
+
+    <div class="col-md-6">
+        <h4>@MUI.dictionary.TtlMessageForUsers</h4>
+        <hr />
+        <div class="alert alert-info col-xs-12">
+            <p>@MUI.dictionary.MsgLine1</p>
+            <p>@MUI.dictionary.MsgLine2</p>
+            <p>@MUI.dictionary.MsgLine3</p>
+            <hr />
+            <span class="h4 pull-right">@MUI.dictionary.TtlAdminSign</span>
+        </div>
+    </div> <!--col-->
+
+</div> <!--row-->

@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html ng-app="notePad">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title | NotePad</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+
+<body>
+    @Html.Partial("_NavBar")
+
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+
+    <footer>
+        <div class="container">
+            <hr />
+            <p>&copy; @DateTime.Now.Year &ndash; &ldquo;@MUI.dictionary.TtlBrandName&rdquo;</p>
+        </div>
+    </footer>
+
+    <!-- 3rd party libraries -->
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/angular")
+
+    @* Get current language for selection client JS locate *@
+    <script src="/Scripts/i18n/angular-locale_@MUI.dictionary._lng"></script>
+
+    @Scripts.Render("~/bundles/bootstrap")
+
+    <script type="text/javascript">
+        window.MyApp = {};
+    </script>
+
+    @RenderSection("scripts", required: false)
+
+    <script type="text/javascript">
+        MyApp.rootPath = '@Url.Content("~")';
+        @RenderSection("jsCode", required: false)
+    </script>
+
+</body>
+
+
+
+</html>

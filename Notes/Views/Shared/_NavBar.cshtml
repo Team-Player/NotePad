@@ -1,0 +1,78 @@
+﻿<div class="navbar navbar-inverse navbar-fixed-top" data-ng-controller="AuthCtrl">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#top" style="color: white">
+                <span class="fa fa-chevron-down"></span>
+            </button>
+            @* ReSharper disable once Html.IdNotResolved *@
+            <a class="navbar-brand" href="#!/task">@MUI.dictionary.TtlBrandName</a>
+        </div>
+        <div class="navbar-collapse collapse navbar-right" id="top">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="javascript:void(0)" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="fa fa-globe"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuLanguage
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu list-group" role="menu">
+                        @*<li><a href="javascript:;">Русский</a></li>
+                        <li><a href="javascript:;">English</a></li>
+                        <li><a href="javascript:;">Татарча</a></li>*@
+                        @foreach (var i in @Notes.Entities.MultilingualUI.AvailableLanguages)
+                        {
+                        <li>
+                            <a href="/Culture/ChangeLanguage?lang=@i.LangCultureName&returnUrl=''" class="list-group-item" style="width: 168px;">
+                                <span class="@i.LangCurrencySpan" aria-hidden="true"></span>
+                                &nbsp @i.LangFullName &nbsp&nbsp
+                                <span class="badge">@i.LangBadge</span>
+                            </a>
+                        </li>
+                        }
+                    </ul>
+                </li>
+                <li ng-class="{'active':(curPath == 'logs')}" data-ng-hide="!user.isAdmin">
+                    @* ReSharper disable once Html.IdNotResolved *@
+                    <a href="#!/logs">
+                        <span class="fa fa-file-text-o"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuLogFile
+                    </a>
+                </li>
+                <li  ng-class="{'active':(curPath == 'edit')}" data-ng-hide="!user.isAuth">
+                    @* ReSharper disable once Html.IdNotResolved *@
+                    <a href="#!/add">
+                        <span class="fa fa-pencil-square-o"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuNoteAdd
+                    </a>
+                </li>
+                <li  ng-class="{'active':(curPath == 'notes')}">
+                    @* ReSharper disable once Html.IdNotResolved *@
+                    <a href="#!/list">
+                        <span class="fa fa-list-alt"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuNoteList
+                    </a>
+                </li>
+                <li  data-ng-hide="!user.isAuth">
+                    <a href="javascript:;">
+                        <span class="fa fa-user"></span>
+                        &nbsp;&nbsp;<span ng-bind="user.nickName">@MUI.dictionary.MenuUser</span>
+                    </a>
+                </li>
+                <li  ng-class="{'active':(curPath == 'login')}" data-ng-hide="user.isAuth">
+                    @* ReSharper disable once Html.IdNotResolved *@
+                    <a href="#!/login">
+                        <span class="fa fa-sign-in"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuLogin
+                    </a>
+                </li>
+                <li data-ng-hide="!user.isAuth">
+                    <a href="javascript:;" data-ng-click="logOut()">
+                        <span class="fa fa-sign-out"></span>
+                        &nbsp;&nbsp;@MUI.dictionary.MenuLogout
+                    </a>
+                </li>
+                @*<li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>*@
+            </ul>
+        </div>
+    </div>
+</div>
