@@ -35,12 +35,12 @@
     // Application constants
 
     app.constant("authSettings", {
-        apiServiceBaseUrl: baseUrl,
+        BaseUrl: baseUrl,
         clientId: "webNotes"
     });
 
     app.constant("dataSettings", {
-        apiServiceBaseUrl: baseUrl
+        BaseUrl: baseUrl
     });
 
     // ######################################################
@@ -76,8 +76,9 @@
     // ######################################################
     // Module running
 
-    app.run(["authService", function (authService) {
+    app.run(["authService", "$log", function (authService, $log) {
         authService.fillAuthData();
+        $log.debug("authService: ", authService);
     }]);
 
     // ######################################################

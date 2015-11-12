@@ -1,0 +1,85 @@
+﻿@{
+    Layout = null;
+}
+
+<br />
+
+<div class="row">
+    <p style="float: left;" class="col-xs-5">        
+        <a href="javascript:;" data-ng-click="getLogsAuth()" class="btn btn-primary col-xs-5">
+            <span class="fa fa-circle"></span>&nbsp;&nbsp; Request Auth Log
+        </a>        
+        <a href="javascript:;" data-ng-click="getLogsData()" class="btn btn-primary col-xs-offset-2 col-xs-5">
+            <span class="fa fa-circle"></span>&nbsp;&nbsp; Request Data Log
+        </a>
+    </p>
+    <p style="float: right;" class="btn btn-info col-xs-2"><span class="fa fa-file-text"></span>&nbsp;&nbsp; All records: <b>{{logs.length}}</b></p>
+
+    <div class="col-md-12">
+        <table class="table table-striped table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>lvl</th>
+                    <th>time</th>
+                    <th>lag</th>
+                    <th>act</th>
+                    <th>user</th>
+                    <th>stat</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-ng-repeat="log in logs"
+                    ng-class="{
+                        '':(log.lvl=='TRACE'),
+                        'success':(log.lvl=='DEBUG'),
+                        'info':(log.lvl=='INFO'),
+                        'warning':(log.lvl=='WARNING'),
+                        'danger':(log.lvl=='ERROR' || log.lvl=='FATAL')
+                    }">
+                    <td title="Level : {{log.lvl}}" style="cursor:help" class="text-center">
+                        <span class="fa"
+                              ng-class="{
+                              'fa-check-circle':(log.lvl=='TRACE'),
+                              'fa-circle text-success':(log.lvl=='DEBUG'),
+                              'fa-exclamation text-info':(log.lvl=='INFO'),
+                              'fa-exclamation-triangle text-warning':(log.lvl=='WARNING'),
+                              'fa-exclamation-circle text-danger':(log.lvl=='ERROR'),
+                              'fa-times-circle text-danger':(log.lvl=='FATAL'),
+                              }">
+                        </span>
+                    </td>
+                    <td ng-bind="log.time"></td>
+                    <td ng-bind="log.lag" class="text-right"
+                        ng-class="{
+                        'text-muted':(log.lag < 50),
+                        'text-danger':(log.lag > 100),
+                        'text-bold':(log.lag > 200)}"></td>
+                    <td title="Action : {{log.act}}" style="cursor:help" class="text-center">
+                        <span class="fa"
+                              ng-class="{
+                              'fa-sign-in':(log.act=='LOGIN'),
+                              'fa-sign-out':(log.act=='LOGOUT'),
+                              'fa-plus-square text-success':(log.act=='CREATE'),
+                              'fa-reorder text-info':(log.act=='READ ALL'),
+                              'fa-external-link-square text-info':(log.act=='READ BY ID'),
+                              'fa-edit text-warning':(log.act=='UPDATE'),
+                              'fa-minus-square text-danger':(log.act=='DELETE'),
+                              }">
+                        </span>
+                    </td>
+                    <td title="User is : {{log.role}}" style="cursor:help">
+                        <span class="fa"
+                              ng-class="{
+                              'fa-user text-info':(log.role=='User'),
+                              'fa-user-secret text-warning':(log.role=='Admin'),
+                              'fa-users text-danger':(log.role=='Public'),
+                              }">
+                        </span>
+                        &nbsp;&nbsp; {{log.login}}
+                    </td> <!-- id, ip, agent -->
+                    <td ng-bind="log.stat" style="cursor:help" title="Message : {{log.message}}" class="text-center text-bold"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

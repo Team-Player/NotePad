@@ -1,7 +1,6 @@
 ﻿;
 (function () {
     "use strict";
-
     // ######################################################
     // Service - module "np.listService" factory "listService"
     // ######################################################
@@ -14,25 +13,24 @@
 
         dataSettings
         ) {
+
         var self = this;
 
         // var for return function data;
         self.notes = {};
 
-        //var baseUrl = "http://notes.team-player.ru/";
-        self.baseUrl = dataSettings.apiServiceBaseUrl;
+        //var baseUrl = "http://npr.team-player.ru/";
+        self._baseUrl = dataSettings.BaseUrl;
         
-        self.getNotes = function () {
-            return $http.get(self.baseUrl + "api/notes")
+        self._getNotes = function () {
+            return $http.get(self._baseUrl + "api/notes")
                 .then(function (results) {
                     $log.debug("NOTES:", results);
                     return results;
                 });
         };
 
-        self.notes.getNotes = self.getNotes;
-
-        $log.debug(self.notes.getNotes);
+        self.notes.getNotes = self._getNotes;        
 
         return self.notes;
     };
@@ -48,11 +46,8 @@
     ];
 
     // ######################################################
-
-    // Module initialization
-    angular
+    angular // Module initialization
         .module("np.listService", [])
         .factory("listService", listSrv);
-
     // ######################################################
 })();

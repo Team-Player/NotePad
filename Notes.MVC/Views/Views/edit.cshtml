@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<br />
+
+<div class="row">
+    <div class="col-xs-12 alert alert-warning" style="margin-bottom: 0">
+
+        <form class="form-horizontal" role="form">
+
+            @*<div class="row" style="margin: 0 -15px -15px -15px;">
+                <div class="col-xs-12 col-sm-3">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="fa fa-sticky-note-o"></span></span>
+                        <input class="form-control valid" placeholder="@MUI.dictionary.PhlNoteId" readonly="readonly"
+                               ng-model="note.id">
+                    </div>
+                    <br />
+                </div>
+
+                <div class="col-xs-12 col-sm-6">
+                    <div class="input-group">
+                        <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                        <input class="form-control valid" placeholder="@MUI.dictionary.PhlAuthor" readonly="readonly"
+                               ng-model="note.userId">
+                    </div>
+                    <br />
+                </div>
+
+                <div class="col-xs-12 col-sm-3">
+                    <div class="input-group">
+                        <input class="form-control" placeholder="@MUI.dictionary.PhlCreateDate" readonly="readonly"
+                              ng-model="note.createTime">
+                        <span class="input-group-addon"><span class="fa fa-calendar-o"></span></span>
+                    </div>
+                    <br />
+                </div>
+            </div>*@
+
+            <div class="input-group col-sm-12">
+                <span class="input-group-addon"><span class="fa fa-bookmark-o"></span></span>
+                <input class="form-control valid" placeholder="@MUI.dictionary.PhlTitle" ng-readonly="model.isReadonly" autofocus
+                       ng-model="note.title">
+            </div>
+
+            <br />
+
+            <div class="input-group col-xs-12">
+                <textarea class="col-xs-12" rows="20" placeholder="@MUI.dictionary.PhlBody" ng-readonly="model.isReadonly" style="font-size: 16px;"
+                          ng-model="note.body"></textarea>
+            </div>
+
+            <div class="row" style="margin: 20px -15px 0 -15px;">
+                <div class="col-xs-offset-4 col-xs-8 col-sm-offset-1 col-sm-3">
+                    <div class="checkbox pull-left"  style="padding-bottom: 5px;">
+                        <input ng-disabled="model.isReadonly" type="checkbox" value="true" ng-model="note.publish" id="isPublic">
+                        <label ng-disabled="model.isReadonly" for="isPublic">@MUI.dictionary.CbxPublic</label>
+                        <br />
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <button ng-disabled="model.isReadonly" class="btn btn-success col-xs-12" type="submit" ng-click="model.save()">@MUI.dictionary.BtnSave</button>
+                </div>
+                <div class="col-xs-6 col-sm-4">
+                    <button ng-disabled="model.isDelDisable" class="btn btn-danger col-xs-12" type="submit" ng-click="model.delete()">@MUI.dictionary.BtnDelete</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = @MUI.dictionary.PageTitleMain;
+}
+
+@section scripts {
+    @*@Scripts.Render("~/bundles/jqueryval") *@
+
+    <!-- Load app main script -->
+    <script src="~/AngularJS/app.js?v=2"></script>
+
+    <!-- Load services -->
+    <script src="~/AngularJS/services/authInterceptorService.js?v=2"></script>
+    <script src="~/AngularJS/services/authService.js?v=2"></script>
+    <script src="~/AngularJS/services/editService.js?v=2"></script>
+    <script src="~/AngularJS/services/listService.js?v=2"></script>
+    <script src="~/AngularJS/services/logsService.js?v=2"></script>
+
+    <!-- Load controllers -->
+    <script src="~/AngularJS/controllers/authController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/editController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/listController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/loginController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/logsController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/navbarController.js?v=2"></script>
+    <script src="~/AngularJS/controllers/taskController.js?v=2"></script>
+
+    <!-- Load custom filters -->
+    @*<script src="~/AngularJS/filters.js?v=2"></script>*@
+
+    <!-- Load custom directives -->
+    @*<script src="~/AngularJS/directives.js?v=2"></script>*@
+}
+
+@section jsCode {
+    @* angular.bootstrap(document.getElementById("notes"), ['notes']); *@
+}
+
+<ng-view></ng-view>

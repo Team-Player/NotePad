@@ -20,7 +20,7 @@
         self.note = {};
 
         //var baseUrl = "http://notes.team-player.ru/";
-        self.baseUrl = dataSettings.apiServiceBaseUrl;
+        self.baseUrl = dataSettings.BaseUrl;
 
         // CREATE - POST
         self.create = function (note) {

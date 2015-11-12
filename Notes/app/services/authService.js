@@ -19,7 +19,7 @@
         var auth = {};
 
         //var baseUrl = "http://notes.team-player.ru/";
-        var baseUrl = authSettings.apiServiceBaseUrl;
+        var baseUrl = authSettings.BaseUrl;
 
         var credentials = {
             userId: 0,

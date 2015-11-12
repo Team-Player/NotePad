@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnDelete" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="BtnLogin" xml:space="preserve">
+    <value>Войти</value>
+    <comment>Button Login</comment>
+  </data>
+  <data name="BtnRegNewUser" xml:space="preserve">
+    <value>Регистрация пользователя</value>
+    <comment>Button New User Registration</comment>
+  </data>
+  <data name="BtnSave" xml:space="preserve">
+    <value>Сохранить</value>
+  </data>
+  <data name="BtnSearch" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="CbxPublic" xml:space="preserve">
+    <value>Опубликовать</value>
+  </data>
+  <data name="MenuLanguage" xml:space="preserve">
+    <value>Русский</value>
+  </data>
+  <data name="MenuLogFile" xml:space="preserve">
+    <value>Логи</value>
+  </data>
+  <data name="MenuLogin" xml:space="preserve">
+    <value>Войти</value>
+  </data>
+  <data name="MenuLogout" xml:space="preserve">
+    <value>Выйти</value>
+  </data>
+  <data name="MenuManage" xml:space="preserve">
+    <value>Управление пользователями, через администратора</value>
+  </data>
+  <data name="MenuNoteAdd" xml:space="preserve">
+    <value>Заметка</value>
+  </data>
+  <data name="MenuNoteList" xml:space="preserve">
+    <value>Список</value>
+  </data>
+  <data name="MenuRegistration" xml:space="preserve">
+    <value>Регистрация</value>
+  </data>
+  <data name="MenuUser" xml:space="preserve">
+    <value>Пользователь</value>
+  </data>
+  <data name="ModelEmailWrong" xml:space="preserve">
+    <value>Введите корректный адрес электронной почты</value>
+    <comment>Model EmailAddress</comment>
+  </data>
+  <data name="ModelPasswordDisplay" xml:space="preserve">
+    <value>Пароль</value>
+    <comment>Model Display Password</comment>
+  </data>
+  <data name="ModelPasswordRequired" xml:space="preserve">
+    <value>Требуется указать пароль</value>
+    <comment>Model Required Password</comment>
+  </data>
+  <data name="ModelPasswordWrong" xml:space="preserve">
+    <value>Пароль не соответствует уровню сложности</value>
+    <comment>Model Password DataType</comment>
+  </data>
+  <data name="ModelRememberMeDisplay" xml:space="preserve">
+    <value>Запомнить меня</value>
+    <comment>Model Display RememberMe</comment>
+  </data>
+  <data name="ModelUserNameDisplay" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+    <comment>Model Display UserName</comment>
+  </data>
+  <data name="ModelUserNameRequired" xml:space="preserve">
+    <value>Требуется указать имя пользователя</value>
+    <comment>Model Required UserName</comment>
+  </data>
+  <data name="MsgLine1" xml:space="preserve">
+    <value>Рекомендуется использовать в качестве имени входа адрес электронной почты.</value>
+  </data>
+  <data name="MsgLine2" xml:space="preserve">
+    <value>Это сделает позволит сделать вход в систему более удобным.</value>
+  </data>
+  <data name="MsgLine3" xml:space="preserve">
+    <value>Для простоты запоминания и получения возможности восстановления пароля.</value>
+  </data>
+  <data name="NavAddNote" xml:space="preserve">
+    <value>Добавить сообщение</value>
+  </data>
+  <data name="NavCategories" xml:space="preserve">
+    <value>Категории сообщений</value>
+  </data>
+  <data name="NavDnDef" xml:space="preserve">
+    <value>Неопределенные</value>
+  </data>
+  <data name="NavFullList" xml:space="preserve">
+    <value>Все сообщения</value>
+  </data>
+  <data name="NavPrivate" xml:space="preserve">
+    <value>Личные</value>
+  </data>
+  <data name="NavPublic" xml:space="preserve">
+    <value>Публичные</value>
+  </data>
+  <data name="PageTitleMain" xml:space="preserve">
+    <value>Главная страница</value>
+  </data>
+  <data name="PhlAuthor" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="PhlBody" xml:space="preserve">
+    <value>Текст заметки</value>
+  </data>
+  <data name="PhlCreateDate" xml:space="preserve">
+    <value>Дата создания</value>
+  </data>
+  <data name="PhlEmailAddress" xml:space="preserve">
+    <value>Адрес электронной почты</value>
+  </data>
+  <data name="PhlNoteId" xml:space="preserve">
+    <value>Номер записи</value>
+  </data>
+  <data name="PhlPassword" xml:space="preserve">
+    <value>Пароль</value>
+  </data>
+  <data name="PhlSearch" xml:space="preserve">
+    <value>Поиск по ключевому слову</value>
+  </data>
+  <data name="PhlTitle" xml:space="preserve">
+    <value>Заголовок статьи</value>
+  </data>
+  <data name="PhlUserName" xml:space="preserve">
+    <value>Имя пользователя</value>
+  </data>
+  <data name="PpvCallAdmin" xml:space="preserve">
+    <value>Для регистрации свяжитесь с администратором</value>
+  </data>
+  <data name="PpvRegService" xml:space="preserve">
+    <value>Служба регистрации</value>
+  </data>
+  <data name="ThDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="ThListFrom" xml:space="preserve">
+    <value>Список заметок с</value>
+  </data>
+  <data name="ThListId" xml:space="preserve">
+    <value>№№</value>
+  </data>
+  <data name="ThListOf" xml:space="preserve">
+    <value>из</value>
+  </data>
+  <data name="ThListTo" xml:space="preserve">
+    <value>по</value>
+  </data>
+  <data name="TtlAdminSign" xml:space="preserve">
+    <value>С уважением, администрация</value>
+    <comment>Title Admin Sign</comment>
+  </data>
+  <data name="TtlBrandName" xml:space="preserve">
+    <value>Блокнот</value>
+  </data>
+  <data name="TtlListNotes" xml:space="preserve">
+    <value>Лист сообщений</value>
+  </data>
+  <data name="TtlLogin" xml:space="preserve">
+    <value>Выполнение входа</value>
+  </data>
+  <data name="TtlLoginLocal" xml:space="preserve">
+    <value>Вход с локальной учетной записью</value>
+  </data>
+  <data name="TtlMessageForUsers" xml:space="preserve">
+    <value>Сообщение для пользователей</value>
+    <comment>Title Message For Users</comment>
+  </data>
+  <data name="_lng" xml:space="preserve">
+    <value>ru.js</value>
+    <comment>Get current language for selection client JS locate</comment>
+  </data>
+</root>

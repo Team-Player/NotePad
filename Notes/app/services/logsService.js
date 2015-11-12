@@ -1,7 +1,6 @@
 ﻿;
 (function () {
     "use strict";
-
     // ######################################################
     // Service - module "np.logsService" factory "logsService"
     // ######################################################
@@ -14,22 +13,23 @@
 
         dataSettings
         ) {
+
         var self = this;
 
         // var for return function data;
         self.logs = {};
 
         //var baseUrl = "http://notes.team-player.ru/";
-        self.baseUrl = dataSettings.apiServiceBaseUrl;
+        self._baseUrl = dataSettings.BaseUrl;
 
-        self.getLogs = function () {
-            return $http.get(self.baseUrl + "api/admin")
+        self._getLogs = function () {
+            return $http.get(self._baseUrl + "api/admin")
                 .then(function (results) {                    
                     return results;
                 });
         };
 
-        self.logs.getLogs = self.getLogs;
+        self.logs.getLogs = self._getLogs;
 
         return self.logs;
     };
@@ -44,12 +44,9 @@
         "dataSettings"
     ];
 
-    // ######################################################
-
-    // Module initialization
-    angular
+    // ######################################################    
+    angular // Module initialization
         .module("np.logsService", [])
         .factory("logsService", logsSrv);
-
     // ######################################################
 })();
